@@ -1,43 +1,51 @@
-# Personal site and portfolio.  
-Identity & Access Management (IAM) + security engineering.  
+# Chidi Ajaezi — Personal Site
 
-Specialties:
-- Okta
-- Entra ID (Azure AD)
-- AWS IAM
-- CyberArk
-- Zero Trust
-- Automation (Workflows, Terraform, PowerShell, Python)
+This is my personal website and portfolio as an **Identity & Access Management Engineer** specializing in:
 
-Site includes:
-- /projects — case studies + portfolio work
-- /blog — technical notes + learning documentation
-- About & Contact
+- Okta Identity Management
+- Microsoft Entra ID (Azure AD)
+- AWS Identity and Access Management (IAM)
+- CyberArk Privileged Access Management
+- Zero Trust Architecture
+- Infrastructure Automation (Terraform, PowerShell, Python)
+- Identity Governance & Administration (IGA)
 
----
+## Site Features
 
-## Local notes
-Node.js 18+ required.
+- **Portfolio & Case Studies** — `/projects`
+- **Technical Blog** — `/blog`
+- **About & Contact** pages
+- Built with Next.js and MDX
+- Deployed on Vercel
+
+## Technology Stack
+
+- **Framework**: Next.js
+- **Content**: MDX for blog posts and documentation
+- **Deployment**: Vercel
+
+## Running Locally
 
 ```bash
+# Clone the repository
 git clone https://github.com/chidiajaezi/personal-site.git
+
+# Navigate to project directory
 cd personal-site
+
+# Install dependencies
 npm install
+
+# Start development server
 npm run dev
+```
+
+The site will be available at `http://localhost:3000`
+
+## Contact
+
+Please visit the contact page on the live site.
 
 ---
 
-## Deployment
-
-Hosted on Vercel.  
-Push to `main` → auto rebuild and publish.
-
----
-
-## Structure
-
-- **app/** — Pages & components (Next.js App Router)  
-- **public/** — Static assets (resume.pdf, images)  
-- **app/blog/*.mdx** — Blog posts  
-- **app/projects/*.mdx** — Projects
-
+*Built with ❤️ by Chidi Ajaezi*
