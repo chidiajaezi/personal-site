@@ -48,4 +48,4 @@ Please visit the contact page on the live site.
 
 ---
 
-*Built with ❤️ by Chidi Ajaezi*
+
