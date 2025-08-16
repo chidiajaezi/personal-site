@@ -1,6 +1,8 @@
 import Link from 'next/link';
 
-const projects = [
+export const metadata = { title: 'Projects — Chidi Ajaezi' };
+
+export const projects = [
   { slug: 'aws-federation', title: 'AWS Federation via Okta/Entra', blurb: 'Least-privilege cloud access at scale.' },
   { slug: 'okta-oidc-mfa', title: 'Okta OIDC + MFA Integration', blurb: 'Modern auth with adaptive MFA.' },
   { slug: 'entra-conditional-access-pim', title: 'Entra ID Conditional Access + PIM', blurb: 'Risk-based access & JIT privilege.' },

@@ -4,21 +4,21 @@ export const metadata = {
 };
 
 import './globals.css';
+import Link from 'next/link';
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className="flex-col min-h-screen">
         <header className="container header">
-          <div className="brand">Chidi Ajaezi</div>
+          <Link href="/" className="brand">Chidi Ajaezi</Link>
           <nav className="nav">
             <a href="/projects">Projects</a>
             <a href="/blog">Blog</a>
             <a href="/about">About</a>
-            <a href="/contact">Contact</a>
           </nav>
         </header>
-        <main className="container">{children}</main>
+        <main className="container flex-grow">{children}</main>
         <footer className="footer">
           <div className="container footer-row">
             <p>© {new Date().getFullYear()} Chidi Ajaezi</p>

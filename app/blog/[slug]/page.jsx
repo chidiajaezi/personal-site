@@ -3,26 +3,16 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import CustomImage from '../../components/CustomImage';
 
-// Custom components for MDX styling
 const customComponents = {
-  h1: ({ children }) => <h1 style={{ fontSize: '2rem', fontWeight: '700', color: 'var(--fg)' }}>{children}</h1>, // Default dark color
-  h2: ({ children }) => <h2 style={{ fontSize: '1.5rem', fontWeight: '600', color: 'var(--fg)' }}>{children}</h2>, // Default dark color
+  h1: ({ children }) => <h1 style={{ fontSize: '2rem', fontWeight: '700', color: 'var(--fg)' }}>{children}</h1>,
+  h2: ({ children }) => <h2 style={{ fontSize: '1.5rem', fontWeight: '600', color: 'var(--fg)' }}>{children}</h2>,
   p: ({ children }) => <p style={{ color: 'var(--fg)', fontSize: '1rem', lineHeight: '1.6' }}>{children}</p>,
   a: ({ children, href }) => <a href={href} style={{ color: '#f97316', textDecoration: 'underline' }}>{children}</a>,
   code: ({ children }) => (
-    <code style={{
-      color: '#f97316',
-      fontFamily: 'monospace',
-    }}>{children}</code>
+    <code style={{ color: '#f97316', fontFamily: 'monospace' }}>{children}</code>
   ),
   pre: ({ children }) => (
-    <pre style={{
-      backgroundColor: '#f1f5f9',
-      padding: '1rem',
-      borderRadius: '4px',
-      overflowX: 'auto',
-      color: 'var(--fg)', // Default text color for code blocks
-    }}>{children}</pre>
+    <pre style={{ backgroundColor: '#f1f5f9', padding: '1rem', borderRadius: '4px', overflowX: 'auto', color: 'var(--fg)' }}>{children}</pre>
   ),
   img: CustomImage,
 };
@@ -30,10 +20,9 @@ const customComponents = {
 export async function generateStaticParams() {
   const postsDir = path.join(process.cwd(), 'app/blog');
   const files = await fs.readdir(postsDir);
-  const slugs = files
-    .filter(file => file.endsWith('.md') || file.endsWith('.mdx'))
-    .map(file => ({ slug: file.replace(/\.mdx?$/, '') }));
-  return slugs;
+  return files
+    .filter(file => file.endsWith('.md'))
+    .map(file => ({ slug: file.replace(/\.md$/, '') }));
 }
 
 export async function generateMetadata({ params }) {
@@ -44,7 +33,9 @@ export async function generateMetadata({ params }) {
 export default async function BlogPost({ params }) {
   const { slug } = params;
   const filePath = path.join(process.cwd(), 'app/blog', `${slug}.md`);
+
   try {
+    await fs.access(filePath);  // Confirm file exists
     const fileContent = await fs.readFile(filePath, 'utf8');
     return (
       <section className="section">
@@ -57,7 +48,7 @@ export default async function BlogPost({ params }) {
       </section>
     );
   } catch (error) {
-    console.error(`Error rendering ${slug}:`, error);
-    return <div>Error loading blog post. Check console for details.</div>;
+    console.error(`Error loading ${slug}.md:`, error);
+    return <div>Blog post not found or error loading. Check console for details.</div>;
   }
 }
