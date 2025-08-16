@@ -10,13 +10,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="flex-col min-h-screen">
-        <header className="container header">
-          <Link href="/" className="brand">Chidi Ajaezi</Link>
-          <nav className="nav">
-            <a href="/projects">Projects</a>
-            <a href="/blog">Blog</a>
-            <a href="/about">About</a>
-          </nav>
+        <header className="header">
+          <div className="container">
+            <Link href="/" className="brand">Chidi Ajaezi</Link>
+            <nav className="nav">
+              <a href="/projects">Projects</a>
+              <a href="/blog">Blog</a>
+              <a href="/about">About</a>
+            </nav>
+          </div>
         </header>
         <main className="container flex-grow">{children}</main>
         <footer className="footer">

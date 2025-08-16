@@ -38,6 +38,9 @@ a:hover {
 .header {
   padding: 24px 0;
   border-bottom: 1px solid var(--line);
+}
+
+.header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -244,10 +247,8 @@ a:hover {
   flex-grow: 1;
 }
 
-/* ... all your previous styles ... */
-
 /* Add for responsive images and centered content in blog/project pages */
-article {
+.article {
   max-width: 760px; /* Matches your .hero p and .list max-width for consistency */
   margin: 0 auto;
   padding: 24px; /* Equivalent to p-6 (6*4=24px assuming default rem) */
