@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
 const projects = [
+  { slug: 'aws-federation', title: 'AWS Federation via Okta/Entra', blurb: 'Least-privilege cloud access at scale.' },
   { slug: 'okta-oidc-mfa', title: 'Okta OIDC + MFA Integration', blurb: 'Modern auth with adaptive MFA.' },
   { slug: 'entra-conditional-access-pim', title: 'Entra ID Conditional Access + PIM', blurb: 'Risk-based access & JIT privilege.' },
-  { slug: 'aws-federation', title: 'AWS Federation via Okta/Entra', blurb: 'Least-privilege cloud access at scale.' },
 ];
 
 export default function ProjectsIndex() {
