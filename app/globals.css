@@ -164,7 +164,7 @@ a:hover {
 }
 
 .list {
-  max-width: 760px;
+  max-width: 900px; /* Increased from 760px for more width/separation */
   margin: 16px auto 0;
   border-top: 1px solid var(--line);
 }
@@ -175,6 +175,13 @@ a:hover {
   justify-content: space-between;
   padding: 14px 0;
   border-bottom: 1px solid var(--line);
+}
+
+.blog-title {
+  flex: 1;
+  margin-right: 20px; /* Adds separation between title and Read button */
+  white-space: normal; /* Allows wrapping */
+  word-break: break-word; /* Breaks long words if needed */
 }
 
 .two-col {
