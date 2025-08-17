@@ -1,4 +1,4 @@
-# Chidi Ajaezi — Personal Site
+# Personal Site
 
 This is my personal website and portfolio as an **Identity & Access Management Engineer** specializing in:
 
