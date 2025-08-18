@@ -2,17 +2,17 @@ export const metadata = {
   title: 'Chidi Ajaezi — IAM Engineer',
   description: 'Identity & Access Management Engineer — Okta, Entra ID, AWS IAM, CyberArk',
 };
-
 import './globals.css';
 import Link from 'next/link';
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="flex-col min-h-screen">
         <header className="header">
           <div className="container">
-            <Link href="/" className="brand">Chidi Ajaezi</Link>
+            <Link href="/" className="brand">
+              <img src="/assets/chidi-logo.png" alt="Chidi Ajaezi Logo" className="brand-logo" style={{ width: '200px', height: '50px', objectFit: 'contain' }} />
+            </Link>
             <nav className="nav">
               <a href="/projects">Projects</a>
               <a href="/blog">Blog</a>
