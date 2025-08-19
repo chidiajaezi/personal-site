@@ -10,7 +10,7 @@ export default function HomePage() {
           Identity & Access Management Engineer
           <span className="stack">Okta · Entra ID · AWS IAM · CyberArk</span>
         </h1>
-        <p>Designing and securing enterprise identity systems with a Zero Trust approach — enabling seamless, compliant access at scale.</p>
+        <p>I design and secure enterprise identity systems with a Zero Trust approach — enabling seamless, compliant access at scale.</p>
         <div className="cta">
           <a className="btn" href="/resume.pdf" target="_blank" rel="noreferrer">View Resume</a>
         </div>
