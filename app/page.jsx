@@ -63,7 +63,7 @@ export default function HomePage() {
         <div className="two-col">
           <div className="card">
             <h3>Happydandis</h3>
-            <p>Gifts brand donating 10% to schools in Nigeria.</p>
+            <p>Plush gift brand with a purpose. 10% of profits support schools in underserved Nigerian communities.</p>
             <a className="link" href="https://happydandis.com" target="_blank">Visit →</a>
           </div>
           <div className="card">
